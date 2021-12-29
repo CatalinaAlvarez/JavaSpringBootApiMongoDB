@@ -84,4 +84,19 @@ public class ServicioRecurso {
         }
         return mensaje;
     }
+
+    public List<RecursoDTO> buscarPorArea(String area){
+        List<Recurso> recursos = repository.findByArea(area);
+        return mapper.fromCollectionList(recursos);
+    }
+
+    public List<RecursoDTO> buscarPorTipo(String tipo){
+        List<Recurso> recursos = repository.findByTipo(tipo);
+        return mapper.fromCollectionList(recursos);
+    }
+
+    public List<RecursoDTO> buscarPorAreaYTipo(String area, String tipo){
+        List<Recurso> recursos = repository.findByAreaAndTipo(area, tipo);
+        return mapper.fromCollectionList(recursos);
+    }
 }
