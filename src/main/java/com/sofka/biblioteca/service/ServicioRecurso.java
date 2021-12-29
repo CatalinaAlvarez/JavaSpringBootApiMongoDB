@@ -75,7 +75,7 @@ public class ServicioRecurso {
 
     public  Mensaje devolverRecurso(String id){
         RecursoDTO recursoDTO= encontrarPorID(id);
-        Mensaje mensaje = mensajeDisponibilidad(recursoDTO);
+        Mensaje mensaje = mensajeDevolver(recursoDTO);
         if(!recursoDTO.isDisponible()){
             recursoDTO.setDisponible(true);
             recursoDTO.setFecha(null);
