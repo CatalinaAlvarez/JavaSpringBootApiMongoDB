@@ -21,6 +21,13 @@ public class Recurso {
     public Recurso(){
     }
 
+    public Recurso(String id, Tipo tipo, Area area, String nombre) {
+        this.id = id;
+        this.tipo = tipo;
+        this.area = area;
+        this.nombre = nombre;
+    }
+
     public Recurso(Tipo tipo, Area area, String nombre) {
         this.tipo = tipo;
         this.area = area;
